@@ -1,0 +1,98 @@
+/* Global Styles */
+/*Header part*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2', sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: #5F43B2; /* Base color */
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.banner_mntb {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#backgroundVideo {
+    position: absolute; /* Make the video fill the entire container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Stretch video to cover the container */
+  }
+
+.navbar {
+    width: 80%;
+    margin: 40px auto;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+    background-image: url('logo.png'); /* Replace 'logo.png' with the path to your logo image */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.2s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.navbar .login {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    border-color: #fff; /* Add this line to set the border color to white */
+}
+
+.navbar .login:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}

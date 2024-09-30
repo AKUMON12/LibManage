@@ -1,0 +1,242 @@
+/* Global Styles */
+/*Header part*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+}
+
+.banner_mntb {
+    width: 100%;
+    height: 100vh;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar {
+    width: 80%;
+    margin: 40px auto;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+    background-image: url('logo.png'); /* Replace 'logo.png' with the path to your logo image */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.2s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.navbar .login {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    border-color: #fff; /* Add this line to set the border color to white */
+}
+
+.navbar .login:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 20%;
+}
+
+.main-content h1 {
+    font-size: 7rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-content p {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-family: 'poppins', sans-serif;
+}
+
+.main-content .btn {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    position: relative;
+    top: 60px;
+}
+
+.main-content .btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+}
+
+.social-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.social-icons li {
+    margin-right: 10px;
+}
+
+.social-icons li:nth-child(2) img {
+    vertical-align: -8px; /* Align the Twitter logo vertically */
+}
+
+/* Footer Section */
+footer {
+    background-color: #1e1738;
+    padding: 20px 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 150px;
+}
+
+.footer-description h3 {
+    margin: 0;
+}
+
+.footer-description p {
+    margin: 0px 0;
+    margin-left: 50px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.footer-description .second-line {
+    display: block; /* Forces it to act like a line break */
+    font-weight: 100; /* Ensures consistent boldness */
+}
+
+.footer-center {
+    flex: 1;
+    text-align: center;
+    margin-right: 70px;
+}
+
+.footer-center p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin-right: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.footer-socials a {
+    margin-left: 10px;
+}
+
+.footer-socials img {
+    width: 25px;
+    height: 25px;
+}
+
+.footer-contact p {
+    margin: 0px 0;
+    margin-left: 50px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.footer-contact .second-line {
+    display: block; /* Forces it to act like a line break */
+    font-weight: 100; /* Ensures consistent boldness */
+}
