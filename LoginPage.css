@@ -1,0 +1,167 @@
+/* Global Styles */
+/*Header part*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2', sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: #5F43B2; /* Base color */
+    /*overflow: hidden; /* Prevent scrollbars */
+}
+
+.banner_mntb {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#backgroundVideo {
+    position: absolute; /* Make the video fill the entire container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Stretch video to cover the container */
+}
+
+/* Main Content */
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 2;
+    margin: 120px 150px 150px 150px;
+    font-family: 'baloo 2', sans-serif;
+}
+
+.login-form {
+    background-color: #F5F5F5;
+    padding: 100px 60px 150px 60px;
+    border-radius: 0px 20px 20px 0px;
+    width: 800px;
+}
+
+.close-button {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000000;
+}
+
+.login-form h2 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 900;
+    text-shadow: 0 0 1px #000, 0 0 1px #000;
+}
+
+.login-form label {
+    color: #000000;
+    font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    color: #000000;
+    border: 3px solid #8E8AA6;
+    background: #F5F5F5;
+}
+
+
+/* -------------------------forgot password and remember me options */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 0px 50px 3px 50px;
+}
+
+.options input[type="checkbox"] {
+    margin-right: 5px;
+    accent-color: #9A96A6;
+    
+}
+
+a {
+    color: #000; /* Black color for forgot password link */
+    text-decoration: none;
+    font-weight: bold;
+}
+/* -------------------------forgot password and remember me options */
+
+
+.login-form button{
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 3px solid #3A3153;
+    background-color: #3A3153;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: larger;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.image-container {
+    position: relative;
+    width: 510px;
+    height: 530px;
+    overflow: hidden;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #3A3153;
+}
+
+/* Welcome container */
+.welcome-container {
+    background-color: #3e3364;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    /* Flexbox for centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    align-items: center; /* Horizontal centering */
+    text-align: center; /* Center the text itself */
+}
+
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+h1 span {
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0;
+}

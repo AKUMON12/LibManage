@@ -21,7 +21,7 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact us</a></li>
             </ul>
-            <a class="login" href="#">Login</a>
+            <a class="login" href="LoginPage.html">Login</a>
         </div>
 
 
@@ -29,7 +29,17 @@
         <div class="signup-container">
             <div class="signup-form">
 
-                <span class="close-button">X</span> 
+<!-- -------------------------close/ex button and its funtion -->
+              <span class="close-button" onclick="redirectToMainpage()">
+                <img src="close icon.png" alt="close">
+              </span> 
+
+              <script>
+                function redirectToMainpage() {
+                    window.location.href = "Mainpage.html";
+                }
+            </script>
+<!-- --------------------------------------------------------- -->
 
                 <h2 class="sign-up-header">Sign up</h2>
               <form>
@@ -50,10 +60,10 @@
 
 
                 <button type="submit">SIGN UP</button>
-
-
               </form>
             </div>
+
+            <!---- -- Anime sa kilid nga ga lihok2 -->
             <div class="image-container">
               <img src="boy-reading-book-animation.gif" alt="Anime Image">
             </div>

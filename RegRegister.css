@@ -10,7 +10,7 @@
 body, html {
     height: 100%;
     background-color: #5F43B2; /* Base color */
-    overflow: hidden; /* Prevent scrollbars */
+    /*overflow: hidden; /* Prevent scrollbars */
 }
 
 .banner_mntb {
@@ -31,6 +31,8 @@ body, html {
     object-fit: cover; /* Stretch video to cover the container */
   }
 
+
+/* Navbar */
 .navbar {
     width: 80%;
     margin: 40px auto;
@@ -114,12 +116,12 @@ body, html {
     background-color: #F5F5F5;
     padding: 60px;
     border-radius: 20px 0px 0px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
 
   .close-button {
     float: right;
     font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
     color: #000000;
 }
