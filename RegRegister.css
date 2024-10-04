@@ -114,7 +114,7 @@ body, html {
   
   .signup-form {
     background-color: #F5F5F5;
-    padding: 60px;
+    padding: 40px;
     border-radius: 20px 0px 0px 20px;
   }
 
@@ -161,6 +161,31 @@ body, html {
     color: #fff;
     letter-spacing: 3px;
   }
+
+  .signup-form button:hover {
+    background-color: #fff;
+    color: #3A3153;
+    border-color: #3A3153;
+  }
+
+
+/* --------sign in */
+  .switch-auth {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.switch-auth a {
+    color: #3A3153;
+    text-decoration: none;
+}
+
+.switch-auth a:hover {
+    text-decoration: underline;
+}
+/* --------sign in */
+
   
   .image-container {
     position: relative;

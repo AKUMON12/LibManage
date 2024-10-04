@@ -44,7 +44,7 @@ body, html {
 
 .login-form {
     background-color: #F5F5F5;
-    padding: 100px 60px 150px 60px;
+    padding: 100px 60px 110px 60px;
     border-radius: 0px 20px 20px 0px;
     width: 800px;
 }
@@ -117,6 +117,31 @@ a {
     letter-spacing: 3px;
 }
 
+.login-form button:hover {
+    background-color: #fff;
+    color: #3A3153;
+    border-color: #3A3153;
+}
+
+
+/* ----------Don't have etc2? Signup */
+.switch-auth {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.switch-auth a {
+    color: #3A3153;
+    text-decoration: none;
+}
+
+.switch-auth a:hover {
+    text-decoration: underline;
+}
+/* ----------Signup */
+
+
 .image-container {
     position: relative;
     width: 510px;
@@ -144,6 +169,7 @@ a {
 }
 
 
+/* Welcome text */
 h1 {
     font-size: 22px;
     margin-bottom: 10px;
