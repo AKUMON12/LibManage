@@ -1,4 +1,4 @@
-// SIDEBAR DROPDOWN
+// SIDEBAR DROPDOWN - OPTIONAL
 const allDropdown = document.querySelectorAll('#sidebar .side-dropdown');
 const sidebar = document.getElementById('sidebar');
 
@@ -57,6 +57,53 @@ toggleSidebar.addEventListener('click', function () {
         });
     }
 });
+
+/*
+If the whole program above still has an error, please do use the program below
+
+const toggleSidebar = document.querySelector('nav .toggle-sidebar');
+const allSideDivider = document.querySelectorAll('#sidebar .divider');
+
+if(sidebar.classList.contains('hide')) {
+	allSideDivider.forEach(item=> {
+		item.textContent = '-'
+	})
+	allDropdown.forEach(item=> {
+		const a = item.parentElement.querySelector('a:first-child');
+		a.classList.remove('active');
+		item.classList.remove('show');
+	})
+} else {
+	allSideDivider.forEach(item=> {
+		item.textContent = item.dataset.text;
+	})
+}
+
+toggleSidebar.addEventListener('click', function () {
+	sidebar.classList.toggle('hide');
+
+	if(sidebar.classList.contains('hide')) {
+		allSideDivider.forEach(item=> {
+			item.textContent = '-'
+		})
+
+		allDropdown.forEach(item=> {
+			const a = item.parentElement.querySelector('a:first-child');
+			a.classList.remove('active');
+			item.classList.remove('show');
+		})
+	} else {
+		allSideDivider.forEach(item=> {
+			item.textContent = item.dataset.text;
+		})
+	}
+})
+    */
+
+
+
+
+
 
 
 

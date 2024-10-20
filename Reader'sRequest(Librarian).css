@@ -25,7 +25,7 @@ html {
 
 body {
     color: #fff;
-    background-image: url('Dashboard\(Librarian\)\ BG.png');
+    background-image: url('Reader\'sRequest\(Librarian\).png');
 	background-size: cover;
 	overflow-x: hidden;
 }
@@ -103,11 +103,10 @@ li {
 }
 
 #sidebar .icon {
-	min-width: 60px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-right: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px 12px 7px;
 }
 #sidebar .icon-right {
 	margin-left: auto;
@@ -459,22 +458,17 @@ main .info-data {
 
 main .info-data .card {
     position: relative; /* Enable positioning for child elements */
-    padding: 20px;
+    padding: 3px 10px;
     border-radius: 10px;
     background: var(--light);
     box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
+    text-align: center;
 }
 
 main .card .head {
     position: relative; /* Positioning context for the icon */
-    padding-top: 35px; /* Create space for the icon */
 }
 
-main .card .head .icon {
-    position: absolute; /* Absolute positioning */
-    top: 0px; /* Distance from the top */
-    height: auto; /* Maintain aspect ratio */
-}
 
 main .info-data p {
     color: #222222;
@@ -486,6 +480,48 @@ main .info-data h2 {
     font-size: 32px;
     height: 35px;
 }
+
+/* SEARCH BAR FOR BOOKS */
+
+main .card-search{
+    position: relative;
+    padding: 3px 10px;
+    border-radius: 10px;
+    background: var(--light);
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
+
+}
+
+main .search-books {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    color: #222222;
+}
+
+main .search-books .icon {
+    font-size: 18px;
+    color: #555555;
+}
+
+main .search-books input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    padding-left: 5px;
+}
+
+/* Placeholder color */
+main .search-books input::placeholder {
+    color: #222222;
+    font-weight: bold;
+}
+
+
 
 
 
