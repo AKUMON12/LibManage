@@ -42,23 +42,24 @@
 <!-- --------------------------------------------------------- -->
 
                 <h2 class="sign-up-header">Sign up</h2>
-              <form>
-                <label for="name">Name</label>
-                <input type="text" placeholder="Name" required>
-
+              <form action="server.php" method="POST">
+                <input type="hidden" name="action" value="register">
+              
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="Username" required>
+              
                 <label for="email">Email</label>
-                <input type="email" placeholder="Email" required>
-
+                <input type="email" name="email" placeholder="Email" required>
+              
                 <label for="password">Preferred Password</label>
-                <input type="password" placeholder="Preferred Password" required>
-
+                <input type="password" name="password" placeholder="Preferred Password" required>
+              
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" placeholder="Confirm Password" required>
-
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+              
                 <label for="department">Department</label>
-                <input type="text" placeholder="Department" required>
-
-
+                <input type="text" name="department" placeholder="Department" required>
+              
                 <button type="submit">SIGN UP</button>
               </form>
 
