@@ -30,16 +30,17 @@
 
                 <h2 class="forpass-header">Reset account password</h2>
                 <p>Enter your username and new password</p>
-                <form>
-                    <label for="name">Username</label>
-                    <input type="text" placeholder="Username" required>
-    
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Password" required>
+                <form action="server.php" method="POST">
+                    <input type="hidden" name="action" value="reset_password">
 
-                    <label for="password">Confirm Password</label>
-                    <input type="password" placeholder="Password" required>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" placeholder="Username" required>
 
+                    <label for="new-password">New Password</label>
+                    <input type="password" name="new_password" placeholder="New Password" required>
+
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" name="confirm_new_password" placeholder="Confirm New Password" required>
 
                     <button type="submit">RESET PASSWORD</button> 
                 </form>

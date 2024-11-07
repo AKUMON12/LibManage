@@ -64,16 +64,18 @@
     
     
                     <h2 class="login-header">Hello, Bookworm!</h2>
-                    <form>
-                        <label for="name">Username</label>
-                        <input type="text" placeholder="Username" required>
+                    <form action="server.php" method="POST">
+                        <input type="hidden" name="action" value="login">
+
+                        <label for="username">Username</label>
+                        <input type="text" name="username" placeholder="Username" required>
     
                         <label for="password">Password</label>
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" name="password" placeholder="Password" required>
     
                         <div class="options">
                             <label>
-                                <input type="checkbox"> Remember me
+                                <input type="checkbox" name="remember_me"> Remember me
                             </label>
                             <a href="ForgotPass.html">Forgot password?</a>
                         </div>
