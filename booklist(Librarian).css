@@ -587,6 +587,7 @@ main .content-data .head .menu-link a:hover {
 	background: var(--grey);
 }
 
+/* TABLE */
 .container {
     background-color: #ffffff;
     border-radius: 12px;
@@ -651,6 +652,7 @@ tbody td:nth-child(3) { /* Styling for the 'BOOK STATUS' column */
 .container ::-webkit-scrollbar-thumb:hover {
     background: #544196; 
 }
+/* TABLE */
 
 
 
