@@ -1,0 +1,772 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+	font-family: 'Baloo 2', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--grey: #F1F0F6;
+	--dark-grey: #8D8D8D;
+	--light: #fff;
+	--dark: #000;
+	--light-green: #E3FFCB;
+	--blue: #1775F1;
+	--light-blue: #D0E4FF;
+	--dark-blue: #0C5FCD;
+	--red: #FC3B56;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+    color: #fff;
+    background-image: url('booklist\(Librarian\).png');
+	background-size: cover;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+
+
+
+.dboard_content{
+	height: 100vh;
+	margin-top: 35px;
+}
+
+
+/* SIDEBAR */
+#sidebar {
+	position: fixed;
+	max-width: 200px;
+	width: 100%;
+	background: #513CA3;
+	top: 0;
+	left: 0;
+	height: 40%;
+	overflow-y: auto;
+	scrollbar-width: none;
+	transition: all .3s ease;
+	z-index: 200;
+	margin-left: 160px;
+    margin-top: 45px;
+	border-radius: 10px;
+}
+#sidebar.hide {
+	max-width: 60px;
+}
+
+#sidebar::-webkit-scrollbar {
+	display: none;
+}
+#sidebar .brand {
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	height: 64px;
+	font-weight: 700;
+	color: var(--blue);
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background: #513CA3;
+	transition: all .3s ease;
+}
+
+
+#sidebar a.brand p{
+	font-family: 'Bakbak One', cursive;
+	color: #fff;
+	font-weight: 100;
+}
+
+#sidebar .logo {
+	min-width: 60px;
+    max-width: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+#sidebar .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px 12px 10px;
+}
+#sidebar .icon-right {
+	margin-left: auto;
+	transition: all .3s ease;
+}
+
+
+#sidebar .icon-therest {
+	min-width: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 6px;
+	margin-right: 23px;
+    margin-left: 18px;
+}
+
+
+#sidebar .side-menu {
+	/*margin: 30px 0 0 0;*/
+	padding: 0 20px;
+	transition: all .3s ease;
+}
+#sidebar.hide .side-menu {
+	padding: 0 0px;
+}
+
+#sidebar .side-menu a {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	color: var(--dark);
+	padding: 0px 16px 0px 0px;
+	transition: all .3s ease;
+	border-radius: 10px;
+	margin: 25px 0;
+	white-space: nowrap;
+}
+
+#sidebar .side-menu > li > a.active .icon-right {
+	transform: rotateZ(90deg);
+}
+#sidebar .side-menu > li > a.active,
+#sidebar .side-menu > li > a.active:hover {
+	color: #F5F5F5;
+}
+
+/* mga ICON sa kilid */
+li a {
+    display: flex;
+    align-items: center; /* Center the icon and text vertically */
+    text-decoration: none; /* Remove underline from link */
+    color: var(--dark); /* Adjust color as needed */
+}
+
+li a.active {
+    font-weight: bold; /* Optional: make active link bold */
+}
+
+li a .icon {
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+#sidebar .divider {
+	margin-top: 24px;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--dark-grey);
+	transition: all .3s ease;
+	white-space: nowrap;
+}
+#sidebar.hide:hover .divider {
+	text-align: left;
+}
+#sidebar.hide .divider {
+	text-align: center;
+}
+#sidebar .side-dropdown {
+	padding-left: 54px;
+	max-height: 0;
+	overflow-y: hidden;
+	transition: all .15s ease;
+}
+#sidebar .side-dropdown.show {
+	max-height: 1000px;
+}
+#sidebar .side-dropdown a:hover {
+	color: var(--blue);
+}
+#sidebar .ads {
+	width: 100%;
+	padding: 20px;
+}
+#sidebar.hide .ads {
+	display: none;
+}
+#sidebar.hide:hover .ads {
+	display: block;
+}
+#sidebar .ads .wrapper {
+	background: var(--grey);
+	padding: 20px;
+	border-radius: 10px;
+}
+#sidebar .btn-upgrade {
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 0;
+	color: var(--light);
+	background: var(--blue);
+	transition: all .3s ease;
+	border-radius: 5px;
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+#sidebar .btn-upgrade:hover {
+	background: var(--dark-blue);
+}
+#sidebar .ads .wrapper p {
+	font-size: 12px;
+	color: var(--dark-grey);
+	text-align: center;
+}
+#sidebar .ads .wrapper p span {
+	font-weight: 700;
+}
+/* SIDEBAR */
+
+
+
+
+
+/* CONTENT */
+#content {
+	position: relative;
+    left: 200px;
+    right: 200px;
+    transition: all .3s ease;
+    width: 920px;
+    margin: 0 160px 0 160px;
+}
+#sidebar.hide + #content {
+    width: 1060px;
+    left: 60px;
+}
+
+
+
+/* NAVBAR */
+nav {
+    height: 64px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    grid-gap: 15px;
+    position: sticky;
+    top: 35px;
+    left: 0;
+    z-index: 100;
+    margin-top: 35px;
+}
+
+nav .toggle-sidebar {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+nav form {
+    max-width: 400px;
+    width: 100%;
+
+}
+
+nav .form-group {
+    position: relative;
+}
+
+nav .form-group input {
+    width: 100%;
+    background: #f5f5f5;
+    color: #5132E2;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px 36px 10px 16px;
+    transition: all .3s ease;
+}
+
+nav .form-group input:focus {
+    box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+}
+
+nav .form-group .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    color: #B2A6E7;
+}
+
+/* Add Member Button */
+.add-member-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #f5f5f5;
+    color: #5132E2;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+	font-size: 14px;
+}
+
+/* Add Book Button */
+.add-book-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: transparent;
+    color: #F5F5F5;
+    border: 1px solid #F5F5F5; /* Border color same as the rest */
+    cursor: pointer;
+    transition: all .3s ease;
+	margin-right: auto; /* Space between buttons */
+	font-size: 14px;
+}
+
+.add-book-btn:hover {
+    background: #f5f5f5; /* Optional hover effect */
+	color: #5132E2;
+}
+
+nav .nav-link {
+    position: relative;
+}
+
+nav .nav-link .icon {
+    font-size: 18px;
+    color: #6E4FFF;
+    background: #F5F5F5;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+nav .nav-link .badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--light);
+    background: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+nav .profile {
+    position: relative;
+}
+
+nav .profile img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+nav .profile .profile-link {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: var(--light);
+    padding: 10px 0;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    width: 160px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+nav .profile .profile-link.show {
+    opacity: 1;
+    pointer-events: visible;
+    top: 100%;
+}
+
+nav .profile .profile-link a {
+    padding: 10px 16px;
+    display: flex;
+    grid-gap: 10px;
+    font-size: 14px;
+    color: var(--dark);
+    align-items: center;
+    transition: all .3s ease;
+}
+
+nav .profile .profile-link a:hover {
+    background: var(--grey);
+}
+/* NAVBAR */
+
+
+
+
+/* MAIN */
+main {
+	width: 100%;
+	padding: 24px 20px 20px 20px;
+}
+main .title {
+	font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+main .breadcrumbs {
+	display: flex;
+	grid-gap: 6px;
+}
+main .breadcrumbs li,
+main .breadcrumbs li a {
+	font-size: 14px;
+}
+main .breadcrumbs li a {
+	color: var(--blue);
+}
+main .breadcrumbs li a.active,
+main .breadcrumbs li.divider {
+	color: var(--dark-grey);
+	pointer-events: none;
+}
+
+
+/* INFO DATA */
+main .info-data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+    grid-gap: 20px;
+}
+
+main .info-data .card {
+    position: relative; /* Enable positioning for child elements */
+    padding: 3px 10px;
+    border-radius: 10px;
+    background: var(--light);
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
+    text-align: center;
+}
+
+main .card .head {
+    position: relative; /* Positioning context for the icon */
+}
+
+
+main .info-data p {
+    color: #222222;
+    font-weight: bold;
+}
+
+main .info-data h2 {
+	color: #5132E2;
+    font-size: 32px;
+    height: 35px;
+}
+
+/* SEARCH BAR FOR BOOKS */
+
+main .card-search{
+    position: relative;
+    padding: 3px 10px;
+    border-radius: 10px;
+    background: var(--light);
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
+
+}
+
+main .search-books {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    color: #222222;
+}
+
+main .search-books .icon {
+    font-size: 18px;
+    color: #555555;
+}
+
+main .search-books input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    padding-left: 5px;
+}
+
+/* Placeholder color */
+main .search-books input::placeholder {
+    color: rgba(34, 34, 34, .5);
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* DATA */
+main .data {
+	display: flex;
+	grid-gap: 20px;
+	margin-top: 20px;
+	flex-wrap: wrap;
+}
+main .data .content-data {
+	flex-grow: 1;
+	flex-basis: 400px;
+	padding: 20px;
+	background: var(--light);
+	border-radius: 10px;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
+}
+main .content-data .head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+main .content-data .head .menu {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main .content-data .head .menu .icon {
+	cursor: pointer;
+}
+main .content-data .head .menu-link {
+	position: absolute;
+	top: calc(100% + 10px);
+	right: 0;
+	width: 140px;
+	background: var(--light);
+	border-radius: 10px;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
+	padding: 10px 0;
+	z-index: 100;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .3s ease;
+}
+main .content-data .head .menu-link.show {
+	top: 100%;
+	opacity: 1;
+	pointer-events: visible;
+}
+main .content-data .head .menu-link a {
+	display: block;
+	padding: 6px 16px;
+	font-size: 14px;
+	color: var(--dark);
+	transition: all .3s ease;
+}
+main .content-data .head .menu-link a:hover {
+	background: var(--grey);
+}
+
+/* TABLE */
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.table-wrapper {
+    max-height: 500px; /* Set max height for scrollable content */
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Fixes column width */
+}
+
+thead th {
+    color: #222222;
+    font-size: 16px;
+    padding: 14px;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; /* Background color for sticky header */
+    z-index: 1;
+}
+
+tbody td {
+    font-size: 14px;
+    color: #333;
+    padding: 12px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+
+tbody td:nth-child(3) { /* Styling for the 'BOOK STATUS' column */
+    font-weight: bold;
+}
+
+.container ::-webkit-scrollbar {
+    width: 5px;
+}
+
+.container ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+.container ::-webkit-scrollbar-thumb {
+    background: #544196; 
+}
+
+.container ::-webkit-scrollbar-thumb:hover {
+    background: #544196; 
+}
+/* TABLE */
+
+
+
+/* MAIN */
+/* CONTENT */
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+	#content {
+		position: relative;
+		width: calc(100% - 60px);
+		transition: all .3s ease;
+	}
+	nav .nav-link,
+	nav .divider {
+		display: none;
+	}
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: #1e1738;
+    padding: 20px 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 150px;
+}
+
+.footer-description h3 {
+    margin: 0;
+}
+
+.footer-description p {
+    margin: 0px 0;
+    margin-left: 50px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.footer-description .second-line {
+    display: block; /* Forces it to act like a line break */
+    font-weight: 100; /* Ensures consistent boldness */
+}
+
+.footer-center {
+    flex: 1;
+    text-align: center;
+    margin-right: 70px;
+}
+
+.footer-center p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin-right: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.footer-socials a {
+    margin-left: 10px;
+}
+
+.footer-socials img {
+    width: 25px;
+    height: 25px;
+}
+
+.footer-contact p {
+    margin: 0px 0;
+    margin-left: 50px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.footer-contact .second-line {
+    display: block; /* Forces it to act like a line break */
+    font-weight: 100; /* Ensures consistent boldness */
+}
